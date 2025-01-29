@@ -1,0 +1,145 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  color: #333; /* Ensures good readability */
+}
+
+/* Heading Section */
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f0e25d;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Container Styling */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+.container .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 40px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+/* Form Details */
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+form .user-details .input-box {
+  flex: 1 1 calc(50% - 15px);
+  display: flex;
+  flex-direction: column;
+}
+
+form .input-box span.details {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.user-details .input-box input {
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+}
+
+/* Button Styling */
+form .button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+form .button input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  box-shadow: 0 4px 10px rgba(113, 183, 230, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  form .user-details .input-box {
+    flex: 1 1 100%; /* Stack inputs on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}

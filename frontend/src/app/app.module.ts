@@ -12,6 +12,8 @@ import { AboutSorobonComponent } from './user/about-sorobon/about-sorobon.compon
 import { SchoolsListComponent } from './admin/schools-list/schools-list.component';
 import { OrdersComponent } from './admin/orders/orders.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterSchoolComponent,
     AboutSorobonComponent,
     SchoolsListComponent,
-    OrdersComponent
+    OrdersComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

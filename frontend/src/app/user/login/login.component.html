@@ -1,1 +1,38 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Welcome Back!</h1>
+        </div>
+        <div class="right-panel">
+            <h2>Login</h2>
+            <form [formGroup]="loginForm">
+                <div class="email">
+                    <input type="email" formControlName="email" placeholder="username@gmail.com">
+                    <div *ngIf="loginForm.controls['email'].touched">
+                        <span *ngIf="loginForm.controls['email'].errors?.['required']" class="alert">This filed is required</span>
+                        <span *ngIf="loginForm.controls['email'].errors?.['email']" class="alert">Enter a valid email</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <input type="password"  formControlName="password" placeholder="********">
+                    <div *ngIf="loginForm.controls['password'].touched">
+                        <span *ngIf="loginForm.controls['password'].errors?.['required']" class="alert">Enter a password</span>
+
+                    </div>
+                </div>
+                <button >Login</button>
+            </form>
+            <p>New User? <a [routerLink]="['/user/register']" routerLinkActive="router-link-active" >Signup</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -7,6 +7,7 @@ import { OrderComponent } from './user/order/order.component';
 import { OrdersComponent } from './admin/orders/orders.component';
 import { SchoolsListComponent } from './admin/schools-list/schools-list.component';
 import { AboutSorobonComponent } from './user/about-sorobon/about-sorobon.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"user/login",pathMatch:'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:"user/order",component:OrderComponent},
   {path:"admin/order/list",component:OrdersComponent},
   {path:"admin/schools/list",component:SchoolsListComponent},
+  {path:"admin/login",component:AdminLoginComponent}
 
 ];
 

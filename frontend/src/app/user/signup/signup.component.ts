@@ -8,11 +8,14 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class SignupComponent {
 
-  singupForm : FormGroup;
+  signupForm : FormGroup;
   constructor(){
-    this.singupForm= new FormGroup({
-      userName: new FormControl('',[Validators.required]),
-      
+    this.signupForm= new FormGroup({
+      schoolName: new FormControl('',[Validators.required]),
+      address:new FormControl('',[Validators.required]),
+      email:new FormControl('',[Validators.email,Validators.required]),
+      phoneNumber:new FormControl('',[Validators.required,Validators.pattern(/^[6-9]\d{9}$/)]),
+      password:new FormControl('',[Validators.required]),      
     })
   }
 
